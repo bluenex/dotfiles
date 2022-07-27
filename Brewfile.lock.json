@@ -11,19 +11,22 @@
         "revision": "8ec900f210c925f4b4731b0f359b0808ca132285"
       },
       "homebrew/cask": {
-        "revision": "56035fa168a4c071948358350cc156639688af3c"
+        "revision": "ef4b4272c0bd19d2dc3d4a0be4d23cc56b2e4614"
       },
       "homebrew/cask-drivers": {
-        "revision": "be11080f5f155c73421feaecb4a066f9ee4cd2f9"
+        "revision": "f06f64cc9d454f237d954bee6a32a717eb5fdc3f"
+      },
+      "homebrew/cask-fonts": {
+        "revision": "cc1f50ee418658a364bd54c5d6dce3cecfa05f1e"
       },
       "homebrew/core": {
-        "revision": "6467fb9d81df77eda0c16782bf06ab013e2c822d"
+        "revision": "ee2bcff79179c03b624c302a06fe3ef1bfee46d0"
       },
       "homebrew/services": {
         "revision": "b167b4279698e0bbf1a00a81bd9c209cbf9bab69"
       },
       "mongodb/brew": {
-        "revision": "ae97d905ffba146323bce634e24136ec97dbdf3c"
+        "revision": "7e1288c0044495daac9d4c99f5c46e34ca0354b5"
       },
       "wix/brew": {
         "revision": "6f5d99a8adc1158e9d6aec3d92c30f9a2b77c968"
@@ -79,6 +82,45 @@
               "cellar": ":any_skip_relocation",
               "url": "https://ghcr.io/v2/homebrew/core/asimov/blobs/sha256:241f2672b244e0f6913abab7ab03d52d2f757d9bf1d384f79e880753e0ade64d",
               "sha256": "241f2672b244e0f6913abab7ab03d52d2f757d9bf1d384f79e880753e0ade64d"
+            }
+          }
+        }
+      },
+      "chezmoi": {
+        "version": "2.19.0",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/chezmoi/blobs/sha256:5ccff56a9f7f10c0281d3f1fa8a41ac3ad163bdf3769c04e5b63cd4f4db0467a",
+              "sha256": "5ccff56a9f7f10c0281d3f1fa8a41ac3ad163bdf3769c04e5b63cd4f4db0467a"
+            },
+            "arm64_big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/chezmoi/blobs/sha256:47c6416f13f53ea25d411dabbd4f0bdfd9eb579871cc980d149adeb8273c1a6d",
+              "sha256": "47c6416f13f53ea25d411dabbd4f0bdfd9eb579871cc980d149adeb8273c1a6d"
+            },
+            "monterey": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/chezmoi/blobs/sha256:05ae4c3e47b57794c1e030ddc86330d573e17cbdf7b9bd761abc0b2e7c488d7e",
+              "sha256": "05ae4c3e47b57794c1e030ddc86330d573e17cbdf7b9bd761abc0b2e7c488d7e"
+            },
+            "big_sur": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/chezmoi/blobs/sha256:75a7136e601dbb3787fa3debdcb49957714b8823b44c33f1e28f706a4e28dbb4",
+              "sha256": "75a7136e601dbb3787fa3debdcb49957714b8823b44c33f1e28f706a4e28dbb4"
+            },
+            "catalina": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/chezmoi/blobs/sha256:b7f771e2a575aa80adc42a6be7daae2d1905c14dbe62291bf93ae50b488ea2c3",
+              "sha256": "b7f771e2a575aa80adc42a6be7daae2d1905c14dbe62291bf93ae50b488ea2c3"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/chezmoi/blobs/sha256:aa3718d61ac6797994d29325c06f6470f157fe403d6ea8af90b711ec56f2ffbe",
+              "sha256": "aa3718d61ac6797994d29325c06f6470f157fe403d6ea8af90b711ec56f2ffbe"
             }
           }
         }
@@ -1535,6 +1577,12 @@
           "full_name": "firefox"
         }
       },
+      "font-fira-mono": {
+        "version": "3.206,4.202",
+        "options": {
+          "full_name": "font-fira-mono"
+        }
+      },
       "google-chrome": {
         "version": "103.0.5060.134",
         "options": {
@@ -1545,6 +1593,12 @@
         "version": "1.19.8",
         "options": {
           "full_name": "mendeley"
+        }
+      },
+      "microsoft-edge": {
+        "version": "103.0.1264.71",
+        "options": {
+          "full_name": "microsoft-edge"
         }
       },
       "microsoft-teams": {
@@ -1578,7 +1632,7 @@
         }
       },
       "obsidian": {
-        "version": "0.15.8",
+        "version": "0.15.9",
         "options": {
           "full_name": "obsidian"
         }
@@ -1632,7 +1686,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.6",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "6467fb9d81df77eda0c16782bf06ab013e2c822d",
+        "Homebrew/homebrew-core": "ee2bcff79179c03b624c302a06fe3ef1bfee46d0",
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4",
         "macOS": "12.5"
