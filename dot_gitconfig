@@ -1,0 +1,135 @@
+# taken and modified from the old fork
+# https://github.com/alrra/dotfiles
+
+[alias]
+
+  ac  = !git add -A && git commit
+  b  = branch
+  co  = checkout
+  cp  = cherry-pick
+  d   = diff
+  dc  = diff --cached
+  f   = fetch
+  # custom at [pretty] section below
+  g   = log --graph --pretty=custom
+  l   = log --pretty=custom
+  # list contributors
+  lc  = shortlog --email --numbered --summary
+  p   = push
+  r   = rebase
+  s   = status
+
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  # Find commits by source code.
+
+  cc = "!f() { \
+    git log --pretty=custom --decorate --date=short -S\"$1\"; \
+  }; f"
+
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  # Find commits by commit message.
+
+  cm = "!f() { \
+    git log --pretty=custom --decorate --date=short --grep=\"$1\"; \
+  }; f"
+
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+  # List remote branches.
+
+  lrb = "!f() { \
+    remote="${1:-origin}"; \
+    git ls-remote --heads "$remote"; \
+  }; f"
+
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+[color "branch"]
+
+  current = green bold
+  local = green
+  remote = yellow
+
+[color "diff"]
+
+  frag = magenta
+  meta = yellow
+
+  new = green
+  old = red
+
+  newMoved = cyan
+  oldMoved = blue
+
+[core]
+
+  abbrev = 12
+  attributesfile = ~/.gitattributes.global
+  autocrlf = input
+  editor = vim
+  excludesfile = ~/.gitignore.global
+  ignorecase = true
+
+[diff]
+
+  # Show blocks of moved text of at least 20
+  # alphanumeric characters differently than adds/deletes.
+  #
+  # https://git-scm.com/docs/git-diff#git-diff-zebra
+
+  colorMoved = zebra
+
+[diff "bin"]
+
+  # Use `hexdump` to diff binary files.
+
+  textconv = hexdump -v -C
+
+[pretty]
+
+  custom = "%C(magenta)%h%C(red)%d %C(yellow)%ar %C(green)%s %C(yellow)(%an)"
+  #                     │        │            │            │             └─ author name
+  #                     │        │            │            └─ message
+  #                     │        │            └─ date (relative)
+  #                     │        └─ decorations (branch, heads or tags)
+  #                     └─ hash (abbreviated)
+
+[push]
+
+  # Make `git push` automatically push relevant
+  # annotated tags when pushing branches out.
+
+  followTags = true
+  default = current
+
+[user]
+
+  # Don't guess the user's identity.
+  # https://github.com/git/git/blob/90f7b16b3adc78d4bbabbd426fb69aa78c714f71/Documentation/config.txt#L2847-L2855
+
+  useConfigOnly = true
+  name = bluenex
+  email = tulakan.r@gmail.com
+
+[include]
+
+  # Load local configs. This is useful if there are any secrets to add.
+  # https://git-scm.com/docs/git-config#_includes
+  #
+  # [!] The following needs to remain at the end of this file in
+  #   order to allow any of the above configs to be overwritten
+  #   by the local ones
+  path = ~/.gitconfig.local
+
+[filter "lfs"]
+
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+
+[init]
+
+  defaultBranch = main
