@@ -52,12 +52,13 @@ tmux source ~/.tmux.conf
 
 ## Manual
 
-### From Website
-
-- [Logi Options+](https://www.logitech.com/en-us/software/logi-options-plus.html)
-
 ### From App Store
 
 - [Line](https://apps.apple.com/th/app/line/id539883307?mt=12)
+- [Messenger](https://apps.apple.com/th/app/messenger/id1480068668?mt=12)
 - [Strongbox](https://apps.apple.com/th/app/strongbox/id1270075435?mt=12)
 - [Giphy](https://apps.apple.com/th/app/giphy-capture-the-gif-maker/id668208984?mt=12)
+
+### From Website
+
+- [Logi Options+](https://www.logitech.com/en-us/software/logi-options-plus.html)
