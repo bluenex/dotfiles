@@ -34,4 +34,24 @@ cd ~
 brew bundle install
 ```
 
+- Run init command to finish setup miniconda
+
+```sh
+conda init "$(basename "${SHELL}")"
+```
+
+- Clone tmux plugin manage and setup
+
+```sh
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# enter tmux
+tmux
+
+# source
+tmux source ~/.tmux.conf
+
+# install plugins by pressing `prefix + I`
+```
+
 **NOTE:** This is the very first attempt and is subject to change. 
