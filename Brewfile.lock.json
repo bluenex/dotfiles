@@ -11,7 +11,7 @@
         "revision": "8ec900f210c925f4b4731b0f359b0808ca132285"
       },
       "homebrew/cask": {
-        "revision": "e612506373de51d74c59ba58a910158249c94dc3"
+        "revision": "8fb09bab466a881623d8aaba1f42dd86bd7cb899"
       },
       "homebrew/cask-drivers": {
         "revision": "242b0f5cbc70263fd8c4fae57316f6fb4be91ab7"
@@ -20,7 +20,7 @@
         "revision": "9ec980067988fba61fb0f44cb042c1645d5bda02"
       },
       "homebrew/core": {
-        "revision": "ee2bcff79179c03b624c302a06fe3ef1bfee46d0"
+        "revision": "33a8f6202214ab2c6ec144def7fd0123fa0b63da"
       },
       "homebrew/services": {
         "revision": "b167b4279698e0bbf1a00a81bd9c209cbf9bab69"
@@ -1367,50 +1367,6 @@
           }
         }
       },
-      "z": {
-        "version": "1.9",
-        "bottle": {
-          "rebuild": 0,
-          "root_url": "https://ghcr.io/v2/homebrew/core",
-          "files": {
-            "arm64_monterey": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/z/blobs/sha256:9c269df17bf038e3dddaf71a2fed2dcef583e5b3f0869fce963e3cae0b3524c4",
-              "sha256": "9c269df17bf038e3dddaf71a2fed2dcef583e5b3f0869fce963e3cae0b3524c4"
-            },
-            "arm64_big_sur": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/z/blobs/sha256:7709d155cd48933c2d72b4de368972a8925c45100da27739f1a41121c9882abf",
-              "sha256": "7709d155cd48933c2d72b4de368972a8925c45100da27739f1a41121c9882abf"
-            },
-            "monterey": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/z/blobs/sha256:b430e19a35c4b0e3d887777d20f67c315c246c2dcfbb0ca8bd7799412d4d9b25",
-              "sha256": "b430e19a35c4b0e3d887777d20f67c315c246c2dcfbb0ca8bd7799412d4d9b25"
-            },
-            "big_sur": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/z/blobs/sha256:3f9c920ff5f5e5d8e0f298e94ecb18d62c2605451c67a5d5ba8a2a318dbd1b6c",
-              "sha256": "3f9c920ff5f5e5d8e0f298e94ecb18d62c2605451c67a5d5ba8a2a318dbd1b6c"
-            },
-            "catalina": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/z/blobs/sha256:3f9c920ff5f5e5d8e0f298e94ecb18d62c2605451c67a5d5ba8a2a318dbd1b6c",
-              "sha256": "3f9c920ff5f5e5d8e0f298e94ecb18d62c2605451c67a5d5ba8a2a318dbd1b6c"
-            },
-            "mojave": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/z/blobs/sha256:3f9c920ff5f5e5d8e0f298e94ecb18d62c2605451c67a5d5ba8a2a318dbd1b6c",
-              "sha256": "3f9c920ff5f5e5d8e0f298e94ecb18d62c2605451c67a5d5ba8a2a318dbd1b6c"
-            },
-            "x86_64_linux": {
-              "cellar": ":any_skip_relocation",
-              "url": "https://ghcr.io/v2/homebrew/core/z/blobs/sha256:7709d155cd48933c2d72b4de368972a8925c45100da27739f1a41121c9882abf",
-              "sha256": "7709d155cd48933c2d72b4de368972a8925c45100da27739f1a41121c9882abf"
-            }
-          }
-        }
-      },
       "zsh": {
         "version": "5.9",
         "bottle": {
@@ -1505,6 +1461,12 @@
       }
     },
     "cask": {
+      "adobe-creative-cloud": {
+        "version": "5.7.0.1307",
+        "options": {
+          "full_name": "adobe-creative-cloud"
+        }
+      },
       "adoptopenjdk11": {
         "version": "11.0.11,9",
         "options": {
@@ -1589,16 +1551,40 @@
           "full_name": "google-chrome"
         }
       },
+      "google-drive": {
+        "version": "60.0.2",
+        "options": {
+          "full_name": "google-drive"
+        }
+      },
+      "linear-linear": {
+        "version": "1.8.0,220614mg65ctstu",
+        "options": {
+          "full_name": "linear-linear"
+        }
+      },
       "mendeley": {
         "version": "1.19.8",
         "options": {
           "full_name": "mendeley"
         }
       },
+      "microsoft-auto-update": {
+        "version": "4.49.22070801",
+        "options": {
+          "full_name": "microsoft-auto-update"
+        }
+      },
       "microsoft-edge": {
         "version": "103.0.1264.71",
         "options": {
           "full_name": "microsoft-edge"
+        }
+      },
+      "microsoft-office": {
+        "version": "16.63.22070801",
+        "options": {
+          "full_name": "microsoft-office"
         }
       },
       "microsoft-teams": {
@@ -1678,36 +1664,6 @@
         "options": {
           "full_name": "zoom"
         }
-      },
-      "adobe-creative-cloud": {
-        "version": "5.7.0.1307",
-        "options": {
-          "full_name": "adobe-creative-cloud"
-        }
-      },
-      "google-drive": {
-        "version": "60.0.2",
-        "options": {
-          "full_name": "google-drive"
-        }
-      },
-      "linear-linear": {
-        "version": "1.8.0,220614mg65ctstu",
-        "options": {
-          "full_name": "linear-linear"
-        }
-      },
-      "microsoft-auto-update": {
-        "version": "4.49.22070801",
-        "options": {
-          "full_name": "microsoft-auto-update"
-        }
-      },
-      "microsoft-office": {
-        "version": "16.63.22070801",
-        "options": {
-          "full_name": "microsoft-office"
-        }
       }
     }
   },
@@ -1716,7 +1672,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.6",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "ee2bcff79179c03b624c302a06fe3ef1bfee46d0",
+        "Homebrew/homebrew-core": "33a8f6202214ab2c6ec144def7fd0123fa0b63da",
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4",
         "macOS": "12.5"
