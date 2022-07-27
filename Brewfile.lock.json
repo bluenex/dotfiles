@@ -11,13 +11,13 @@
         "revision": "8ec900f210c925f4b4731b0f359b0808ca132285"
       },
       "homebrew/cask": {
-        "revision": "ef4b4272c0bd19d2dc3d4a0be4d23cc56b2e4614"
+        "revision": "e612506373de51d74c59ba58a910158249c94dc3"
       },
       "homebrew/cask-drivers": {
-        "revision": "f06f64cc9d454f237d954bee6a32a717eb5fdc3f"
+        "revision": "242b0f5cbc70263fd8c4fae57316f6fb4be91ab7"
       },
       "homebrew/cask-fonts": {
-        "revision": "cc1f50ee418658a364bd54c5d6dce3cecfa05f1e"
+        "revision": "9ec980067988fba61fb0f44cb042c1645d5bda02"
       },
       "homebrew/core": {
         "revision": "ee2bcff79179c03b624c302a06fe3ef1bfee46d0"
@@ -1677,6 +1677,36 @@
         "version": "5.11.3.9065",
         "options": {
           "full_name": "zoom"
+        }
+      },
+      "adobe-creative-cloud": {
+        "version": "5.7.0.1307",
+        "options": {
+          "full_name": "adobe-creative-cloud"
+        }
+      },
+      "google-drive": {
+        "version": "60.0.2",
+        "options": {
+          "full_name": "google-drive"
+        }
+      },
+      "linear-linear": {
+        "version": "1.8.0,220614mg65ctstu",
+        "options": {
+          "full_name": "linear-linear"
+        }
+      },
+      "microsoft-auto-update": {
+        "version": "4.49.22070801",
+        "options": {
+          "full_name": "microsoft-auto-update"
+        }
+      },
+      "microsoft-office": {
+        "version": "16.63.22070801",
+        "options": {
+          "full_name": "microsoft-office"
         }
       }
     }
