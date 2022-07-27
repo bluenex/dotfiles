@@ -1,4 +1,6 @@
-## New machine setup steps
+# New machine setup steps
+
+## CLIs
 
 - Install NVM manually (check if the script is still up-to-date [here](https://github.com/nvm-sh/nvm#install--update-script))
 
@@ -34,13 +36,7 @@ cd ~
 brew bundle install
 ```
 
-- Run init command to finish setup miniconda
-
-```sh
-conda init "$(basename "${SHELL}")"
-```
-
-- Clone tmux plugin manage and setup
+- Clone tmux plugin manager and run installation
 
 ```sh
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -54,4 +50,14 @@ tmux source ~/.tmux.conf
 # install plugins by pressing `prefix + I`
 ```
 
-**NOTE:** This is the very first attempt and is subject to change. 
+## Manual
+
+### From Website
+
+- [Logi Options+](https://www.logitech.com/en-us/software/logi-options-plus.html)
+
+### From App Store
+
+- [Line](https://apps.apple.com/th/app/line/id539883307?mt=12)
+- [Strongbox](https://apps.apple.com/th/app/strongbox/id1270075435?mt=12)
+- [Giphy](https://apps.apple.com/th/app/giphy-capture-the-gif-maker/id668208984?mt=12)
