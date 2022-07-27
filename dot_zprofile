@@ -1,6 +1,3 @@
-# load homebrew
+# only load homebrew in this file, the rest is loaded via .zshrc
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# load nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
