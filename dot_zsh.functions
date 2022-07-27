@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+fzfp() {
+  fzf --preview '[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || highlight -O ansi -l {} || coderay {} || rougify {} || cat {}) 2> /dev/null | head -500'
+}
+
+getBranchName() {
+  local bName
+
+  decodeSlash=$("pbpaste" | sed -nE 's/&#x2F;/\//gp')
+  bName=$(echo "$decodeSlash" | sed -nE 's/.*\/c\/(.*)">.*<\/a>.*/\1/p')
+  echo "$bName" | pbcopy;
+
+  echo "$bName"
+}
+
+findBranch() {
+  git branch | grep "$1"
+}
+
+# switch_java_home() {
+
+#   if echo "$JAVA_HOME" | grep 'adoptopenjdk-8' > /dev/null;
+#   then
+#     unset JAVA_HOME
+#     # if 1.8 is being exported
+#     java11_path=$(/usr/libexec/java_home -v "11")
+#     export JAVA_HOME="$java11_path"
+#     echo "JAVA_HOME is changed to '$java11_path'"
+#   else
+#     unset JAVA_HOME
+#     # if 11 is being exported
+#     java8_path=$(/usr/libexec/java_home -v "1.8.0")
+#     export JAVA_HOME="$java8_path"
+#     echo "JAVA_HOME is changed to '$java8_path'"
+#   fi
+
+# }
+
+# add_to_path_start() {
+
+#   case ":$PATH:" in
+#     *":$1:"*) :;; # already there
+#     *) export PATH="$1:$PATH";; # or PATH="$PATH:$1"
+#   esac
+
+# }
+
+# add_to_path_end() {
+
+#   case ":$PATH:" in
+#     *":$1:"*) :;; # already there
+#     *) export PATH="$PATH:$1";; # or PATH="$PATH:$1"
+#   esac
+
+# }

@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+source_zsh_files() {
+
+    declare -r CURRENT_DIRECTORY="$(pwd)"
+
+    declare -r -a FILES_TO_SOURCE=(
+        ".zsh.aliases"
+        ".zsh.functions"
+        ".zsh.exports"
+        # for local settings that should
+        # not be under version control
+        ".zsh.local"
+    )
+
+    local file=""
+    local i=""
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    # for i in ${!FILES_TO_SOURCE[*]}; do
+    for i in ${FILES_TO_SOURCE[@]}; do
+
+        file="$HOME/$i"
+
+        # echo "sourcing $file..."
+
+        [ -r "$file" ] \
+            && . "$file"
+
+    done
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    cd "$CURRENT_DIRECTORY"
+
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+source_zsh_files
+unset -f source_zsh_files
+
+# Remove duplicated entries
+typeset -U PATH
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Clear system messages (system copyright notice, the date
+# and time of the last login, the message of the day, etc.).
+
+# clear
