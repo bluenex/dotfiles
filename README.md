@@ -1,5 +1,7 @@
 # New machine setup steps
 
+Currently support only MacOS machine.
+
 ## CLIs
 
 - Install NVM manually (check if the script is still up-to-date [here](https://github.com/nvm-sh/nvm#install--update-script))
