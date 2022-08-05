@@ -103,6 +103,7 @@
 
   followTags = true
   default = current
+  autoSetupRemote = true
 
 [user]
 
