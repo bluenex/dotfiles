@@ -22,7 +22,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 brew install chezmoi
 
 # init with apply
-$ sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply bluenex
+$ sh -c "$(curl -fsLS https://chezmoi.io/get)" -- init --apply bluenex --branch minimal
 ```
 
 - Install Rosetta 2 (some apps may still need it)
