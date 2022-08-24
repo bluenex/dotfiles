@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# snippet from
+# https://github.com/typicode/husky/issues/1180#issue-1338275706
+
 export NVM_DIR="$HOME/.nvm"
 GIT_ROOT="$(git rev-parse --show-toplevel)"
 
