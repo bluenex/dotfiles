@@ -4,10 +4,8 @@
 # https://github.com/typicode/husky/issues/1180#issue-1338275706
 
 export NVM_DIR="$HOME/.nvm"
-GIT_ROOT="$(git rev-parse --show-toplevel)"
+# GIT_ROOT="$(git rev-parse --show-toplevel)"
 
-# Check node version when using nvm:
-[ "$(node --version)" == cat "$GIT_ROOT/.nvmrc" ] || {
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-    nvm use
-}
+# assume there is no node and nvm is not running
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+nvm use
