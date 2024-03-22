@@ -164,6 +164,9 @@ PATH=~/.console-ninja/.bin:$PATH
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # gh copilot alias (enable ghcs for cli)
+if ! gh extension list | grep -q 'gh-copilot'; then
+  gh extension install github/gh-copilot
+fi
 eval "$(gh copilot alias -- zsh)"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
