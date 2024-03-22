@@ -157,3 +157,14 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# console-ninja
+PATH=~/.console-ninja/.bin:$PATH
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# gh copilot alias (enable ghcs for cli)
+eval "$(gh copilot alias -- zsh)"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
