@@ -6,6 +6,9 @@ fzfp() {
   fzf --preview '[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || highlight -O ansi -l {} || coderay {} || rougify {} || cat {}) 2> /dev/null | head -500'
 }
 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# git
 getBranchName() {
   local bName
 
@@ -19,6 +22,31 @@ getBranchName() {
 findBranch() {
   git branch | grep "$1"
 }
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# gh copilot alias lazy load (enable ghcs for cli)
+load_gh_copilot () {
+  echo "🚨 GH Copilot not loaded! Loading now..."
+
+  # check if the command is available
+  if ! gh extension list | grep -q 'gh-copilot'; then
+    echo "🚨 GH Copilot not installed! Installing now..."
+    gh extension install github/gh-copilot
+  fi
+
+  # set alias to zsh
+  eval "$(gh copilot alias -- zsh)"
+}
+
+# wrap in ghcs to trigger load_gh_copilot upon first call
+ghcs() {
+  unset -f ghcs
+  load_gh_copilot
+  eval "ghcs \$@"
+}
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # switch_java_home() {
 
@@ -38,6 +66,8 @@ findBranch() {
 #   fi
 
 # }
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # add_to_path_start() {
 

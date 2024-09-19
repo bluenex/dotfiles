@@ -162,27 +162,3 @@ unset __conda_setup
 PATH=~/.console-ninja/.bin:$PATH
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# gh copilot alias lazy load (enable ghcs for cli)
-load_gh_copilot () {
-  echo "🚨 GH Copilot not loaded! Loading now..."
-
-  # check if the command is available
-  if ! gh extension list | grep -q 'gh-copilot'; then
-    echo "🚨 GH Copilot not installed! Installing now..."
-    gh extension install github/gh-copilot
-  fi
-
-  # set alias to zsh
-  eval "$(gh copilot alias -- zsh)"
-}
-
-# wrap in ghcs to trigger load_gh_copilot upon first call
-ghcs() {
-  unset -f ghcs
-  load_gh_copilot
-  eval "ghcs \$@"
-}
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
