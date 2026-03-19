@@ -1,5 +1,9 @@
 # My custom ignore
 *.temp
+GEMINI.md
+copilot-instructions.md
+AGENTS.md
+.opencode
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos,node,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos,node,python
