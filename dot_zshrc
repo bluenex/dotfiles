@@ -103,3 +103,11 @@ source $ZSH/oh-my-zsh.sh
 # load zsh_profile
 [ -n "$PS1" ] \
     && . ~/.zsh.loader
+
+# pnpm
+export PNPM_HOME="/Users/tulakann/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

@@ -1,8 +1,8 @@
 # My custom ignore
+bruno-api-collection/
 *.temp
 GEMINI.md
 copilot-instructions.md
-AGENTS.md
 .opencode
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos,node,python
@@ -198,7 +198,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# lib/
 lib64/
 parts/
 sdist/

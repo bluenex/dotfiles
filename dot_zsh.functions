@@ -3,7 +3,10 @@
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 fzfp() {
-  fzf --preview '[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || highlight -O ansi -l {} || coderay {} || rougify {} || cat {}) 2> /dev/null | head -500'
+  fzf --preview-window=right:70% \
+    --bind 'shift-right:change-preview-window(right:85%|right:95%|right:70%)' \
+    --bind 'shift-left:change-preview-window(right:50%|right:30%|right:70%)' \
+    --preview '[[ $(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || highlight -O ansi -l {} || coderay {} || rougify {} || cat {}) 2> /dev/null | head -500'
 }
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
